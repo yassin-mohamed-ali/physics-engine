@@ -56,6 +56,9 @@ while running:
 
         new_vx = (p1.vx * p1.mass + p2.vx * p2.mass) / (p1.mass + p2.mass)
         new_vy = (p1.vy * p1.mass + p2.vy * p2.mass) / (p1.mass + p2.mass)
+        new_vx += random.uniform(-1, 1)
+        new_vy += random.uniform(-1, 1)
+
         print(new_vx,new_vy)
         planets = [Planet(new_x, new_y, new_mass, new_volume, RED, new_vx, new_vy)]
     if len(planets) == 2:
